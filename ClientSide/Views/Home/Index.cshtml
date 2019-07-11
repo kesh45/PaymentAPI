@@ -1,0 +1,325 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>E - pay</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="~/Content/mdb.min.css" rel="stylesheet">
+    <link href="~/Content/mdb.min1.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <link rel="stylesheet" href="~/Content/style.css" />
+
+    <style>
+        html,
+        body,
+        header,
+        .jarallax {
+            height: 100%;
+        }
+
+        .haz {
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body class="band-lp">
+
+    <!-- Main Navigation -->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="~/img/logo.png" width="50"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars black-text"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto smooth-scroll"></ul>
+                    <!-- Social Icons -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a data-toggle="modal" data-target="#modalLoginAvatar" class="nav-link black-text"><i class="fas fa-sign-in-alt"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a data-toggle="modal" data-target="#orangeModalSubscription" class="nav-link black-text"><i class="fas fa-user"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Intro Section -->
+        <div id="home" class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('../../img/bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <div class="mask rgba-black-light">
+                <div class="container h-100 d-flex justify-content-center align-items-center">
+                    <div class="row smooth-scroll">
+                        <div class="col-md-12">
+                            <div class="text-center text-white">
+                                <div class="wow fadeInDown" data-wow-delay=".2s">
+                                    <h2 class="font-weight-bold display-3 text-uppercase mb-0">e - pay</h2>
+                                    <hr class="hr-light my-3 clearfix d-none d-md-block">
+                                    <h4 class="pt-2 pb-3">Online Solution Payment API </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- Main Navigation -->
+
+
+    <div class="modal fade" id="orangeModalSubscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-warning" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header text-center">
+                    <h4 class="modal-title white-text w-100 font-weight-bold py-2">Registration</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="md-form mb-5">
+                        <i class="fas fa-user prefix grey-text"></i>
+                        <input type="text" id="RegUsername" class="form-control">
+                        <label for="RegUsername">Your Username</label>
+                    </div>
+
+                    <div class="md-form">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <input type="password" id="RegPass" class="form-control">
+                        <label for="RegPass">Your Password</label>
+                    </div>
+                </div>
+
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <button id="btn_reg" type="button" class="btn btn-outline-amber waves-effect">Submit <i class="fas fa-paper-plane-o ml-1"></i></button>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+
+
+    <!--Modal: Login Form-->
+    <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+            <!--Content-->
+            <div class="modal-content">
+
+                <!--Header-->
+                <div class="modal-header">
+                    <img src="~/img/login.png" alt="avatar" class="rounded-circle img-responsive">
+                </div>
+                <!--Body-->
+                <div class="modal-body text-center mb-1">
+
+                    <h5 class="mt-1 mb-2">Merchant</h5>
+
+                    <div class="md-form ml-0 mr-0">
+                        <input type="text" id="txtusn" class="form-control form-control-sm validate ml-0">
+                        <label data-error="wrong" data-success="right" for="form29" class="ml-0">Enter Username</label>
+                    </div>
+
+                    <div class="md-form ml-0 mr-0">
+                        <input type="password" id="txtpas" class="form-control form-control-sm validate ml-0">
+                        <label data-error="wrong" data-success="right" for="form29" class="ml-0">Enter password</label>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button id="btn_log" class="btn btn-amber btn-rounded mt-1">Login <i class="fas fa-sign-in ml-1"></i></button>
+                    </div>
+                </div>
+
+
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!--Modal: Login Form-->
+    <!-- Footer -->
+    <footer class="page-footer white text-center text-md-left">
+
+        <!-- Footer Links -->
+        <div class="container mb-4">
+
+            <!-- Grid row -->
+            <div class="row text-center">
+
+                <!-- Grid column -->
+                <div class="col-md-12 mt-1 mb-1 wow fadeIn" data-wow-delay="0.3s">
+
+                    <div class="footer-socials mt-1 mb-2">
+                        <a type="button" class="btn-floating btn-amber"><i class="fab fa-cc-visa"></i></a>
+                        <!-- Youtube -->
+                        <a type="button" class="btn-floating  btn-amber"><i class="fab fa-cc-mastercard"></i></a>
+                        <!-- Instagram -->
+                        <a type="button" class="btn-floating  btn-amber"><i class="fab fa-cc-amex"></i></a>
+
+                    </div>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright py-3 text-center">
+            <div class="container-fluid black-text">
+                © 2019 Copyright: <a href="" target="_blank"> E - Pay </a>
+            </div>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    <!--  SCRIPTS  -->
+    <!--  JQuery  -->
+    <script type="text/javascript" src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <!--  Bootstrap tooltips  -->
+    <script type="text/javascript" src="~/Scripts/popper.min.js"></script>
+
+    <!--  Bootstrap core JavaScript  -->
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+
+    <!--  MDB core JavaScript  -->
+    <script type="text/javascript" src="~/Scripts/mdb.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/mdb.min1.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script>
+
+
+    //Animation init
+    new WOW().init();
+
+  $.validate({
+   validateOnBlur : false, // disable validation when input looses focus
+    scrollToTopOnError : false ,
+    modules : 'location, date, security, file',
+    onModulesLoaded : function() {
+
+    }
+  });
+
+    $(document).ready(function () {
+    $('.mdb-select').material_select();
+    });
+
+   $(document).ready(function () {
+     $('#acpt').attr('disabled',true);
+    });
+
+    // MDB Lightbox Init
+    $(function () {
+      $("#mdb-lightbox-ui").load("../mdb-addons/mdb-lightbox-ui.html");
+    });
+
+
+
+          $(function () {
+
+
+
+
+
+
+        $("#btn_log").click(function () {
+            var uname = $("#txtusn").val();
+            var pass = $("#txtpas").val();
+             $.ajax({
+                dataType: "json",
+                contentType: "application/json;charset=utf-8",
+                type: "POST",
+                 data: JSON.stringify({
+                     "param1": uname,
+                     "param2": pass
+                 }),
+                url: "@(Url.Action("Authentication_Log", "Home"))",
+                 success: function (data) {
+                     var ans = data;
+                     if (ans == "Success") {
+                         toastr.success(data);
+                        setInterval(Set, 1000);
+                     } else {
+
+                       toastr.error(data);
+                     }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                }
+
+            });
+
+            function Set() {
+                 window.location.href = "@Url.Action("Buy1", "Home")";
+            }
+        });
+
+
+              
+
+        $("#btn_reg").click(function () {
+
+            var Username = $("#RegUsername").val();
+            var passw = $("#RegPass").val();
+             $.ajax({
+                dataType: "json",
+                contentType: "application/json;charset=utf-8",
+                type: "POST",
+                 data: JSON.stringify({
+                     "param1": Username,
+                     "param2": passw
+                 }),
+                url: "@(Url.Action("Authentication_Reg", "Home"))",
+                 success: function (data) {
+                     var ans = data;
+                     if (ans == "Success") {
+                         toastr.success(data);
+                       
+                     } else {
+
+                       toastr.error(data);
+                     }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                }
+            });          
+        });
+
+
+
+
+    });// End of Jquery structure
+    </script>
+
+
+
+
+
+</body>
+
+</html>

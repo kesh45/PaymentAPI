@@ -1,0 +1,318 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" href="img/sd.ico" type="image/x-icon" />
+    <title>E - Buy</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css" rel="stylesheet" type="text/css" />
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <link href="~/Content/mdb.min1.css" rel="stylesheet">
+
+</head>
+
+<body class="band-lp">
+
+    <!-- Main Navigation -->
+    <header>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar white">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="~/img/logo.png" width="50"></a>
+                <button class="navbar-toggler black" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars black-text"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto smooth-scroll">
+                        <li class="nav-item active">
+                            <a class="nav-link black-text " href="@Url.Action("Buy1", "Home")">Checkout </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link black-text" href="@Url.Action("Buyer2", "Home")">Payment Details </a>
+                        </li>
+                    </ul>
+                    <!-- Social Icons -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a class="nav-link black-text">Hi @Session["username"].ToString()</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a data-toggle="modal" data-target="#frameModalBottom" class="nav-link black-text"><i class="fas fa-sign-out-alt"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <div class="modal fade bottom" id="frameModalBottom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-frame modal-bottom" role="document">
+
+            <!--Content-->
+            <div class="modal-content">
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+
+                        <h4 class="display">Are you sure to log out to your account ?</h4>
+                        <button class="btn btn-danger btn-rounded">Yes</button>
+                        <button class="btn btn-unique btn-rounded" data-dismiss="modal">No</button>
+                    </div>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Main Navigation -->
+    @RenderBody()
+
+
+    <!-- Footer -->
+    <footer class="page-footer grey darken-1 text-center text-md-left mt-4 pt-4">
+
+        <!-- Footer Links -->
+        <div class="container mb-4">
+
+            <!-- Grid row -->
+            <div class="row text-center">
+
+                <!-- Grid column -->
+                <div class="col-md-12 mt-1 mb-1 wow fadeIn" data-wow-delay="0.3s">
+
+                    <div class="footer-socials mt-1 mb-2">
+
+                        <!-- Facebook -->
+                        <a type="button" class="btn-floating btn-amber"><i class="fab fa-cc-visa"></i></a>
+                        <!-- Youtube -->
+                        <a type="button" class="btn-floating  btn-amber"><i class="fab fa-cc-mastercard"></i></a>
+                        <!-- Instagram -->
+                        <a type="button" class="btn-floating  btn-amber"><i class="fab fa-cc-amex"></i></a>
+
+                    </div>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright py-3 text-center">
+            <div class="container-fluid">
+                © 2019 Copyright: <a href="#" target="_blank"> E - Pay </a>
+            </div>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    <!--  SCRIPTS  -->
+    <!--  JQuery  -->
+    <script type="text/javascript" src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+  
+    <!--  Bootstrap tooltips  -->
+    <script type="text/javascript" src="~/Scripts/popper.min.js"></script>
+
+    <!--  Bootstrap core JavaScript  -->
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <!--  MDB core JavaScript  -->
+
+    <script type="text/javascript" src="~/Scripts/mdb.min1.js"></script>
+    <!-- Jquery Datatable -->
+    <script type="text/javascript" src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
+   
+
+
+    <script>
+
+        //Animation init
+        new WOW().init();
+
+      
+        
+
+        $(document).ready(function () {
+            $('.mdb-select').material_select();
+            $("#datatable1").DataTable();
+        
+        });
+
+          
+       
+
+
+        $(document).ready(function () {
+            $('#datatables1').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+        });
+
+
+
+
+        $(function () {
+
+
+       $.validate({
+         form : '#registration-form',
+         modules : 'security',
+        onError : function($form) {         
+         },
+         onSuccess : function($form) {         
+           PayApi();
+          return false; // Will stop the submission of the form
+        }
+      });
+
+
+
+            //$("#btn_pay").click(function () {
+
+            function PayApi() {
+
+            var fname = $("#fname").val();
+            var sname = $("#sname").val();
+            var address = $("#address").val();
+            var email = $("#email").val();
+            var amount = $("#amount").val();
+            var cardn = $("#cardnumber").val();
+            var carde = $("#exp").val();
+            var cardtype = $("#card option:selected").val();
+            var cardcvv = $("#cvv").val();
+            var token = '@Session["token"].ToString()';
+
+
+
+             $.ajax({
+                dataType: "json",
+                contentType: "application/json;charset=utf-8",
+                type: "POST",
+                 data: JSON.stringify({
+                     "fname": fname,
+                     "sname": sname,
+                     "address": address,
+                     "email": email,
+                     "amount":  amount,
+                     "cardn":  cardn,
+                     "carde":  carde,
+                     "cardtype": cardtype,
+                     "cardcvv": cardcvv,
+                     "token": token
+                 }),
+                 url: "@(Url.Action("PaymentProcess", "Home"))",
+                 success: function (data) {
+
+                     var ans = data;
+                     if (ans == "Successful") {
+
+                         toastr.success(ans);
+                         setInterval(Set, 1000);
+
+
+                         clear();
+                     } else {
+                         clear();
+                       toastr.error(ans);
+                     }
+
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                }
+
+            });
+        
+           
+            }///
+
+            function Set() {
+                location.reload();
+            }
+
+               function clear() {
+            $("#fname").val("");
+            $("#sname").val("");
+            $("#address").val("");
+            $("#email").val("");
+            $("#amount").val("");
+            $("#cardnumber").val("");
+            $("#exp").val("");
+            $("#cvv").val("");
+            
+        }
+      
+
+          var token = '@Session["token"].ToString()';
+         var t = $('#datatables1').DataTable();
+
+
+           $.ajax({
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            type: "POST",
+            data: JSON.stringify({
+                    "param": token
+             }),
+            url: "@(Url.Action("GetPaymentDetails", "Home"))",
+            success: function (data) {
+
+                $.each(JSON.parse(data), function (idx, obj) {
+                    if (obj.Payment_Approval == false) {
+                         t.row.add([ obj.firstname, obj.surname, obj.address, obj.Amount, obj.card_Type, obj.Payment_date, "No", obj.currency]).draw(false);
+                    } else {
+                         t.row.add([ obj.firstname, obj.surname, obj.address, obj.Amount, obj.card_Type, obj.Payment_date, "yes", obj.currency]).draw(false);
+                    }
+                   
+                    var Msd = "";
+                   
+
+                });
+
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+
+            }
+        });
+
+
+
+
+
+
+    });// End of Jquery structure
+
+    </script>
+
+</body>
+
+</html>
+
