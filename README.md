@@ -85,4 +85,4 @@ The Request body Parameters :
 ![APilink](ImgGit/Capture4.PNG) 
 ![APilink](ImgGit/Capture9.PNG) 
 
-4. See the testing document to use API
+4. See the GuideApi document to be able to use the API
