@@ -10,7 +10,7 @@ This application provides the basic functionality of a payment gateway through A
 
 ## Azure Devops CICD Pipeline
 
-please check the link for CICD of the projects and Only the automated build has been implemented.The released part has not been implemented due to server hosting
+Please check the CICD link of the projects and Only the automated build has been implemented.The released part has not been implemented due to server hosting
 
 https://dev.azure.com/dhaneshpurdaseea/PaymentAPI
 
