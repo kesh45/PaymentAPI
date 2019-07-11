@@ -8,6 +8,12 @@ This application provides the basic functionality of a payment gateway through A
 3. Client Side
 4. Bank simulation
 
+## Azure Devops CICD Pipeline
+
+please check the link for CICD of the projects and Only the automated build has been implemented.The released part has not been implemented due to server hosting
+
+https://dev.azure.com/dhaneshpurdaseea/PaymentAPI
+
 
 ## Solution include:
 This Project consist of 3 Parts which is the **ClientSide**, **ApiGateway** and **BankSide**.All of these projects are build on .NET framework 4.7.2
