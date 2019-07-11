@@ -11,6 +11,15 @@ This application provides the basic functionality of a payment gateway through A
 
 ## Solution include:
 This Project consist of 3 Parts which is the **ClientSide**, **ApiGateway** and **BankSide**.All of these projects are build on .NET framework 4.7.2
+see on different branches:
+
+Backup if branches project are not working :
+
+Client : https://drive.google.com/file/d/1QB0VCowSeUoUhsW85J84QZCWf0KOvhN2/view?usp=sharing
+
+Apigateway : https://drive.google.com/file/d/15viQqJi7xpfQPSYIn1aopURZJsTf2alX/view?usp=sharing
+
+Bankside : https://drive.google.com/file/d/1EgBFGXuM-4SyfHs_jtl919la9pprk6_q/view?usp=sharing
 
 
 ### ClientSide:
